@@ -1,0 +1,40 @@
+2020-11-05 19:42:03,201 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-11-05 19:42:10,759 [INFO ]  Added 'SpacyNLP' to component cache. Key 'SpacyNLP-en'.
+2020-11-05 19:43:33,458 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhooks/rest/webhook'
+Traceback (most recent call last):
+  File "c:\programdata\anaconda3\lib\site-packages\sanic\app.py", line 965, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "c:\programdata\anaconda3\lib\site-packages\sanic\router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "c:\programdata\anaconda3\lib\site-packages\sanic\router.py", line 452, in _get
+    raise method_not_supported
+sanic.exceptions.MethodNotSupported: Method GET not allowed for URL /webhooks/rest/webhook
+2020-11-05 19:43:33,528 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/favicon.ico'
+Traceback (most recent call last):
+  File "c:\programdata\anaconda3\lib\site-packages\sanic\app.py", line 965, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "c:\programdata\anaconda3\lib\site-packages\sanic\router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "c:\programdata\anaconda3\lib\site-packages\sanic\router.py", line 475, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /favicon.ico not found
+2020-11-05 19:44:56,960 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhooks/rest/webhook%20error'
+Traceback (most recent call last):
+  File "c:\programdata\anaconda3\lib\site-packages\sanic\app.py", line 965, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "c:\programdata\anaconda3\lib\site-packages\sanic\router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "c:\programdata\anaconda3\lib\site-packages\sanic\router.py", line 475, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /webhooks/rest/webhook error not found
+2020-11-05 19:48:59,425 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-11-05 19:49:12,351 [INFO ]  Added 'SpacyNLP' to component cache. Key 'SpacyNLP-en'.
+2020-11-05 19:49:18,385 [ERROR]  Unable to start server
+Traceback (most recent call last):
+  File "c:\programdata\anaconda3\lib\site-packages\sanic\server.py", line 915, in serve
+    http_server = loop.run_until_complete(server_coroutine)
+  File "c:\programdata\anaconda3\lib\asyncio\base_events.py", line 583, in run_until_complete
+    return future.result()
+  File "c:\programdata\anaconda3\lib\asyncio\base_events.py", line 1385, in create_server
+    % (sa, err.strerror.lower())) from None
+OSError: [Errno 10048] error while attempting to bind on address ('0.0.0.0', 5005): only one usage of each socket address (protocol/network address/port) is normally permitted
